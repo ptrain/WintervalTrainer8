@@ -25,7 +25,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF0021CC">
+    <Grid Style="{StaticResource LayoutRootStyle}" Background="#FF2E2E2E">
         
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -471,7 +471,7 @@
                     	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="intsGrid">
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
-                    				<Thickness>0,482,0,0</Thickness>
+                    				<Thickness>0,481,0,0</Thickness>
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
@@ -530,6 +530,34 @@
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
                     				<Thickness>27,233,106,347</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="yourGuessTitle">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>27,25,53,555</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="yourGuess">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>47,78,117,502</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="theAnswerTitle">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>27,131,4,449</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="theAnswer">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>47,180,97,400</Thickness>
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
