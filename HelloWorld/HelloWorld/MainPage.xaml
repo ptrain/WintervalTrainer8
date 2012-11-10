@@ -56,7 +56,7 @@
             	<RowDefinition Height="410*"/>
             </Grid.RowDefinitions>
             <TextBlock x:Name="IntervalDescriptor" Text="{StaticResource IntsDescrip}" Style="{StaticResource Descriptors}" MinWidth="65" MaxWidth="200" RenderTransformOrigin="0.497,0.485" Margin="34,0,0,0"/>
-            <ListView Grid.Column="0" x:Name="theIntervals" ItemsSource="{Binding Source={StaticResource cvsInts}}" MaxWidth="200"  Grid.Row="1" Grid.ColumnSpan="3" Background="DarkGray" Margin="0,0,0,21" Grid.RowSpan="2">
+            <ListView Grid.Column="0" x:Name="theIntervals" ItemsSource="{Binding Source={StaticResource cvsInts}}" MaxWidth="200"  Grid.Row="1" Grid.ColumnSpan="3" Background="#FF632A70" Margin="0,0,0,21" Grid.RowSpan="2">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Width="50">
