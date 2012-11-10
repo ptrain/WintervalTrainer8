@@ -216,8 +216,8 @@ namespace HelloWorld
             }
 
             // display right info
-            note1.Text = "";
-            note2.Text = "";
+            note1.Text = n1.Name;
+            note2.Text = n2.Name;
             theAnswer.Text = currAns.Name;
             yourGuess.Text = ans.Name;
 
