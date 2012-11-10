@@ -84,7 +84,7 @@
         <TextBlock x:Name="note1"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="341,123,895,457" Height="48" Grid.Row="1" />
 
         <TextBlock x:Name="hintTitle"  RenderTransformOrigin="9,1.35" Text="{StaticResource HintTitleText}" Style="{StaticResource HintTextStyle}" Margin="289,201,947,379" Height="48" Grid.Row="1" />
-        <TextBlock x:Name="hintContent"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource HintTextStyle}" Margin="368,201,215,379" Height="48" Grid.Row="1" />
+        <TextBlock x:Name="hintContent"  RenderTransformOrigin="9,1.35" Style="{StaticResource HintTextStyle}" Margin="368,201,215,379" Height="48" Grid.Row="1" />
 
         <TextBlock x:Name="note2Title"  RenderTransformOrigin="9,1.35" Text="{StaticResource Note2Text}" Style="{StaticResource UpperDescripText}" Margin="538,64,544,516" Height="48" Grid.Row="1" />
         <TextBlock x:Name="note2"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="592,123,642,457" Height="48" Grid.Row="1" />
@@ -236,6 +236,20 @@
                 			<DiscreteObjectKeyFrame KeyTime="0">
                 				<DiscreteObjectKeyFrame.Value>
                 					<Thickness>287,551,660,29</Thickness>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="hintContent">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Thickness>386,551,197,29</Thickness>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="hintToggle">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Thickness>102,30,0,36</Thickness>
                 				</DiscreteObjectKeyFrame.Value>
                 			</DiscreteObjectKeyFrame>
                 		</ObjectAnimationUsingKeyFrames>
@@ -479,6 +493,27 @@
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
                     				<x:Double>NaN</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="hintToggle">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>16,40,0,26</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.Column)" Storyboard.TargetName="hintToggle">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Int32>2</x:Int32>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="hintToggle">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Int32>1</x:Int32>
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
