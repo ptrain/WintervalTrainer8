@@ -81,8 +81,8 @@
         <TextBlock x:Name="note1Title"  RenderTransformOrigin="9,1.35" Text="{StaticResource Note1Text}" Style="{StaticResource UpperDescripText}" Margin="289,64,823,516" Height="48" Grid.Row="1" />
         <TextBlock x:Name="note1"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="341,123,895,457" Height="48" Grid.Row="1" />
 
-        <TextBlock x:Name="note2"  RenderTransformOrigin="9,1.35" Text="{StaticResource Note2Text}" Style="{StaticResource UpperDescripText}" Margin="538,64,544,516" Height="48" Grid.Row="1" />
-        <TextBlock x:Name="note2Title"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="592,123,642,457" Height="48" Grid.Row="1" />
+        <TextBlock x:Name="note2Title"  RenderTransformOrigin="9,1.35" Text="{StaticResource Note2Text}" Style="{StaticResource UpperDescripText}" Margin="538,64,544,516" Height="48" Grid.Row="1" />
+        <TextBlock x:Name="note2"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="592,123,642,457" Height="48" Grid.Row="1" />
         
         <TextBlock x:Name="yourGuessTitle"  RenderTransformOrigin="9,1.35" Text="{StaticResource YourGuessText}" Style="{StaticResource UpperDescripText}" Margin="793,64,317,516" Height="48" Grid.Row="1" />
         <TextBlock x:Name="yourGuess"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource UpperDescripText}" Margin="852,123,378,457" Height="48" Grid.Row="1" />

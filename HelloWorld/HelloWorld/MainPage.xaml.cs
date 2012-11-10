@@ -113,7 +113,11 @@ namespace HelloWorld
 
         private void Play_Scale(object sender, RoutedEventArgs e)
         {
-
+            // clear last guess' metadata
+            note1.Text = "";
+            note2.Text = "";
+            theAnswer.Text = "";
+            yourGuess.Text = "";
             // This simply plays the currently selected notes. These notes are globals somewhere
             
             // Plays the first sound, then an event handler
@@ -210,6 +214,12 @@ namespace HelloWorld
                 ansWrongNum.Text = numWrong.ToString();
                 ansRightNum.Text = numRight.ToString();
             }
+
+            // display right info
+            note1.Text = "";
+            note2.Text = "";
+            theAnswer.Text = currAns.Name;
+            yourGuess.Text = ans.Name;
 
             // Choose new notes for next try, set up correct answer interval (which is global I guess?)
             setupTry();
