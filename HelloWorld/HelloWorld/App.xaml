@@ -60,6 +60,10 @@
                 <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
                 <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
             </Style>
+            <x:String x:Key="PlayText">Play Interval</x:String>
+            <x:String x:Key="SubmitText">Submit Answer</x:String>
+
+
 
         </ResourceDictionary>
     </Application.Resources>
