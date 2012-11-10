@@ -60,7 +60,7 @@
         <ListView x:Name="theIntervals" ItemsSource="{Binding Source={StaticResource cvsInts}}" Margin="0,120,1131,-1" MaxHeight="500" Grid.RowSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="20">
+                    <StackPanel Margin="20" Orientation="Horizontal" Width="50">
                         <TextBlock Text="{Binding Name}" Style="{StaticResource BasicTextStyle}" Width="50"/>
                     </StackPanel>
                 </DataTemplate>
@@ -68,14 +68,15 @@
         </ListView>
         <Button x:Name="SubmitButton" Content="{StaticResource SubmitText}" Click="Submit_Answer" Height="71" Width="203" FontSize="22" Margin="268,290,0,267" Grid.Row="1" />
 
-        
 
-        <StackPanel Margin="348,441,768,139" Orientation="Horizontal" Grid.Row="1">
-            <TextBlock x:Name="ansWrong" RenderTransformOrigin="0.499,0.5" Text="{StaticResource WrongText}" Style="{StaticResource WrongTextStyle}" Height="48" />
+
+        <StackPanel x:Name="wrongPanel" Orientation="Horizontal" Margin="445,441,671,139" Grid.Row="1">
+            <TextBlock x:Name="ansWrong" RenderTransformOrigin="0.499,0.5" Text="{StaticResource WrongText}" Style="{StaticResource WrongTextStyle}" />
             <TextBlock x:Name="ansWrongNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource WrongTextStyle}" Margin="10,0,0,0" Height="48" />
+            
         </StackPanel>
         
-        <StackPanel Margin="794,441,322,139" Orientation="Horizontal" Grid.Row="1">
+        <StackPanel x:Name="rightPanel" Margin="799,441,317,139" Orientation="Horizontal" Grid.Row="1">
             <TextBlock x:Name="ansRight" RenderTransformOrigin="0.499,0.5" Text="{StaticResource RightText}" Style="{StaticResource CorrectTextStyle}" Height="48" />
             <TextBlock x:Name="ansRightNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource CorrectTextStyle}" Margin="10,0,0,0" Height="48"  />
         </StackPanel>
@@ -106,6 +107,108 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
                         </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="theIntervals">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<VerticalAlignment>Stretch</VerticalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="theIntervals">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Stretch</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="theIntervals">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>-1,1024,-1,-1</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SubmitButton">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>28,760,0,395</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="PlayButton">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>519,760,0,395</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="ansWrong">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<VerticalAlignment>Stretch</VerticalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="ansWrong">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<HorizontalAlignment>Stretch</HorizontalAlignment>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="ansWrong">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>NaN</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="ansWrong">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>49</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ansWrong">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>0,0,-140,0</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ansWrong" d:IsOptimized="True"/>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="stackPanel">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>49,622,555,512</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ansWrongNum">
+                        	<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ansWrongNum">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Thickness>54,0,-75,-42</Thickness>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="ansWrongNum">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>NaN</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="ansWrongNum">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>57</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
 
