@@ -14,6 +14,7 @@
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Interval Trainer</x:String>
+        
     </Page.Resources>
 
     <!--
@@ -50,7 +51,28 @@
         </StackPanel>-->
 
 
-            <Button Content="Play" Click="Play_Scale" Margin="859,470,0,120" Grid.Row="1"/>
+        <Button Content="Play" Click="Play_Scale" Margin="870,560,0,30" Grid.Row="1"/>
+        <TextBlock x:Name="scaleQuestion" Margin="0,262,0,312" Grid.Row="1" RenderTransformOrigin="0.499,0.5" Text="{StaticResource questionString}" Style="{StaticResource QuestionText}" />
+        <Button Content="{StaticResource True_Button}" Click="Play_Scale" Margin="794,349,0,241" Grid.Row="1"/>
+        <Button Content="{StaticResource False_Button}" Click="Play_Scale" Margin="457,349,0,241" Grid.Row="1"/>
+        <StackPanel Margin="1,0,0,0" Orientation="Vertical" Grid.Row="1">
+            
+        </StackPanel>
+        
+
+        <StackPanel Margin="348,441,768,139" Orientation="Horizontal" Grid.Row="1">
+            <TextBlock x:Name="ansWrong" RenderTransformOrigin="0.499,0.5" Text="{StaticResource WrongText}" Style="{StaticResource WrongTextStyle}" Height="48" />
+            <TextBlock x:Name="ansWrongNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource WrongTextStyle}" Margin="10,0,0,0" Height="48" />
+        </StackPanel>
+        
+        <StackPanel Margin="794,441,322,139" Orientation="Horizontal" Grid.Row="1">
+            <TextBlock x:Name="ansRight" RenderTransformOrigin="0.499,0.5" Text="{StaticResource RightText}" Style="{StaticResource CorrectTextStyle}" Height="48" />
+            <TextBlock x:Name="ansRightNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource CorrectTextStyle}" Margin="10,0,0,0" Height="48"  />
+        </StackPanel>
+        
+        
+        
+
 
 
         <VisualStateManager.VisualStateGroups>

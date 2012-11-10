@@ -25,6 +25,41 @@
                 <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
                 <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
             </Style>
+            <x:String x:Key="True_Button">True</x:String>
+            <x:String x:Key="False_Button">False</x:String>
+            <x:String x:Key="questionString">Is this a perfect 5th?</x:String>
+            <Style x:Key="QuestionText" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
+                <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
+            <x:String x:Key="WrongText">Wrong:</x:String>
+            <Style x:Key="WrongTextStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="DarkRed"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
+            <x:String x:Key="RightText">Right:</x:String>
+            <Style x:Key="CorrectTextStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="DarkGreen"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>
