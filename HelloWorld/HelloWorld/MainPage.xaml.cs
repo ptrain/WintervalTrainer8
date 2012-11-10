@@ -21,6 +21,8 @@ namespace HelloWorld
     /// </summary>
     public sealed partial class MainPage : HelloWorld.Common.LayoutAwarePage
     {
+        private int numWrong = 0;
+        private int numRight = 0;
         public MainPage()
         {
             this.InitializeComponent();
@@ -37,6 +39,8 @@ namespace HelloWorld
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            ansWrongNum.Text = numWrong.ToString();
+            ansRightNum.Text = numRight.ToString();
         }
 
         /// <summary>
@@ -57,8 +61,13 @@ namespace HelloWorld
         private void Play_Scale(object sender, RoutedEventArgs e)
         {
             //play a sound
+            firstNotePlayer.Play();
             //return null;
+        }
 
+        private void firstNotePlayer_PlaySecondNote(object sender, RoutedEventArgs e)
+        {
+            secondNotePlayer.Play();
         }
     }
 }
