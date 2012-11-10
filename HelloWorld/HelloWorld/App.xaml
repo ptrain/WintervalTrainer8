@@ -40,7 +40,7 @@
             </Style>
             <x:String x:Key="WrongText">Wrong:</x:String>
             <Style x:Key="WrongTextStyle" TargetType="TextBlock">
-                <Setter Property="Foreground" Value="DarkRed"/>
+                <Setter Property="Foreground" Value="Red"/>
                 <Setter Property="FontSize" Value="30"/>
                 <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
                 <Setter Property="TextTrimming" Value="WordEllipsis"/>

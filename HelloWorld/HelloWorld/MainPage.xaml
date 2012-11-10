@@ -112,7 +112,7 @@
         </StackPanel>
         
         <StackPanel x:Name="rightPanel" Margin="799,441,317,139" Orientation="Horizontal" Grid.Row="1">
-            <TextBlock x:Name="ansRight" RenderTransformOrigin="0.499,0.5" Text="{StaticResource RightText}" Style="{StaticResource CorrectTextStyle}" Height="48" />
+            <TextBlock x:Name="ansRight" RenderTransformOrigin="0.499,0.5" Text="{StaticResource RightText}" Style="{StaticResource UpperDescripText}" Height="48" />
             <TextBlock x:Name="ansRightNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource CorrectTextStyle}" Margin="10,0,0,0" Height="48"  />
         </StackPanel>
 
