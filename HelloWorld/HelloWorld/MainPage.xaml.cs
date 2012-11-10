@@ -37,6 +37,12 @@ namespace HelloWorld
         /// </summary>
         private bool holdForSound = false;
 
+        // Class variable to hold the Wrong Text Style
+        private Style WrongStyle;
+
+        // Another one for correct text style
+        private Style CorrectStyle;
+
         //private Interval lastInt = null;
 
         public List<Interval> intervals = new List<Interval>();
@@ -64,6 +70,8 @@ namespace HelloWorld
             ansRightNum.Text = numRight.ToString();
             this.populateIntervals();
             this.populateNotes();
+            WrongStyle = Application.Current.Resources["WrongTextStyle"] as Style;
+            CorrectStyle = Application.Current.Resources["CorrectTextStyle"] as Style;
 
             // Pick new notes, set global vars
             setupTry();
@@ -113,7 +121,11 @@ namespace HelloWorld
 
         private void Play_Scale(object sender, RoutedEventArgs e)
         {
-
+            // clear last guess' metadata
+            note1.Text = "";
+            note2.Text = "";
+            theAnswer.Text = "";
+            yourGuess.Text = "";
             // This simply plays the currently selected notes. These notes are globals somewhere
             
             // Plays the first sound, then an event handler
@@ -203,13 +215,23 @@ namespace HelloWorld
                 numRight++;
                 ansWrongNum.Text = numWrong.ToString();
                 ansRightNum.Text = numRight.ToString();
+                yourGuessTitle.Style = CorrectStyle;
+                yourGuess.Style = CorrectStyle;
             }
             else {
                 // do whatever happens when it's wrong
                 numWrong++;
                 ansWrongNum.Text = numWrong.ToString();
                 ansRightNum.Text = numRight.ToString();
+                yourGuess.Style = WrongStyle;
+                yourGuessTitle.Style = WrongStyle;
             }
+
+            // display right info
+            note1.Text = n1.Name;
+            note2.Text = n2.Name;
+            theAnswer.Text = currAns.Name;
+            yourGuess.Text = ans.Name;
 
             // Choose new notes for next try, set up correct answer interval (which is global I guess?)
             setupTry();
