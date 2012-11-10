@@ -134,6 +134,15 @@ namespace HelloWorld
             //submit answer and return true or false
             var ans = (theIntervals.SelectedItem as Interval);
 
+            //play a sound
+            firstNotePlayer.Play();
+            //return null;
+        }
+
+
+        private void firstNotePlayer_PlaySecondNote(object sender, RoutedEventArgs e)
+        {
+            secondNotePlayer.Play();
         }
     }
 

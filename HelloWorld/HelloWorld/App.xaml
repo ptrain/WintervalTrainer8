@@ -64,7 +64,6 @@
             <x:String x:Key="SubmitText">Submit Answer</x:String>
 
 
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>

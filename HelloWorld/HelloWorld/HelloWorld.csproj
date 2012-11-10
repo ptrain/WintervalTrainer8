@@ -129,6 +129,21 @@
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Common\ReadMe.txt" />
+    <Content Include="sounds\a6.wav" />
+    <Content Include="sounds\as6.wav" />
+    <Content Include="sounds\b6.wav" />
+    <Content Include="sounds\c6.wav" />
+    <Content Include="sounds\c4.wav" />
+    <Content Include="sounds\c7.wav" />
+    <Content Include="sounds\cs6.wav" />
+    <Content Include="sounds\d6.wav" />
+    <Content Include="sounds\ds6.wav" />
+    <Content Include="sounds\e6.wav" />
+    <Content Include="sounds\f6.wav" />
+    <Content Include="sounds\fs6.wav" />
+    <Content Include="sounds\g.wav" />
+    <Content Include="sounds\g6.wav" />
+    <Content Include="sounds\gs6.wav" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
