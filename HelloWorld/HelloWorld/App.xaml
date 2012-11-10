@@ -62,6 +62,41 @@
             </Style>
             <x:String x:Key="PlayText">Play Interval</x:String>
             <x:String x:Key="SubmitText">Submit Answer</x:String>
+            <x:String x:Key="IntsDescrip">Intervals</x:String>
+            <Style x:Key="Descriptors" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
+            <Style x:Key="IntervalTextStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
+                <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+                <Setter Property="Margin" Value="10,10,0,0" />
+            </Style>
+            <x:String x:Key="Note1Text">First Note:</x:String>
+            <x:String x:Key="YourGuessText">Your Guess:</x:String>
+            <x:String x:Key="TheAnswerText">Correct Answer:</x:String>
+            <Style x:Key="UpperDescripText" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="DarkGreen"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
 
 
         </ResourceDictionary>
