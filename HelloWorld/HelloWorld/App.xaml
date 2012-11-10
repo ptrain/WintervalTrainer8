@@ -108,8 +108,8 @@
                 <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
                 <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
             </Style>
-
-
+            <x:String x:Key="HintButton">Toggle Hints</x:String>
+            <x:String x:Key="HintsDisabled">Hints Disabled</x:String>
 
         </ResourceDictionary>
     </Application.Resources>

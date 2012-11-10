@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Interval Trainer</x:String>
+        <x:String x:Key="AppName">Winterval Trainer 8</x:String>
         <CollectionViewSource x:Name="cvsInts" IsSourceGrouped="True" />
         <x:String x:Key="Note2Text">Second Note:</x:String>
 
@@ -38,10 +38,12 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button x:Name="hintToggle" Grid.Column="2" Content="{StaticResource HintButton}" Margin="522,39,0,27" Height="74" Width="160" Click="Toggle_Hint" />
         </Grid>
         
         <Grid x:Name="intsGrid" Margin="10,25,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="240" Height="593" VerticalAlignment="Top">

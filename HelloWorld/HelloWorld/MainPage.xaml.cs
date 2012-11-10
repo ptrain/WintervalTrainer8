@@ -50,6 +50,12 @@ namespace HelloWorld
 
         List<Note> notes = new List<Note>();
 
+        //helper vars for showing hints
+        private bool ShowHints = true;
+        private string DisabledHintsText = Application.Current.Resources["HintsDisabled"] as String;
+
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -71,7 +77,7 @@ namespace HelloWorld
             this.populateIntervals();
             this.populateNotes();
             WrongStyle = Application.Current.Resources["WrongTextStyle"] as Style;
-            CorrectStyle = Application.Current.Resources["CorrectTextStyle"] as Style;
+            CorrectStyle = Application.Current.Resources["UpperDescripText"] as Style;
 
             // Pick new notes, set global vars
             setupTry();
@@ -117,13 +123,15 @@ namespace HelloWorld
 
             // Calclulate interval
             currAns = calculateInterval(n1, n2);
-
-            // Setup hint
-            //hintContent.Text = currAns.Hint;
         }
 
         private void Play_Scale(object sender, RoutedEventArgs e)
         {
+            // Setup hint
+            if (hintContent.Text != currAns.Hint && ShowHints)
+                hintContent.Text = currAns.Hint;
+            else if (!ShowHints)
+                hintContent.Text = DisabledHintsText;
             // clear last guess' metadata
             note1.Text = "";
             note2.Text = "";
@@ -145,31 +153,9 @@ namespace HelloWorld
             {
                 holdForSound = true;
             }
-            
-            // Now set the interval that was for later
-            //lastInt = 
-            
-            
-            //return null;
-            //ansWrongNum.Text = (theIntervals.SelectedItem as Interval).Name;
-
-
-
-
-
-
-
-
-            //////////THIS LOGIC HAS TO BE CHANGED
-
-            ///// CHANGE THIS FUCKING LOGIC
-
-            ///// THIS IS IN HERE SO WE DON'T FUCK UP LATER, BUT IF WE LEAVE IT WE WILL
-            holdForSound = false;
-            /////those are some angry FUCKING COMMENTS!!!!!!!!!!!!!! LISTEN TO THEM!!!!!!!!!!!!
-            //REMOVE THIS WHEN WE HAVE CODE THAT CLEANS UP AFTER 
         }
 
+        // Populate our basic intervals
         private void populateIntervals()
         {
             intervals.Add(new Interval() { Name = "m2", NumHalfSteps = 1 });
@@ -236,6 +222,10 @@ namespace HelloWorld
             theAnswer.Text = currAns.Name;
             yourGuess.Text = ans.Name;
 
+            //clear hint
+            if (ShowHints && hintContent.Text != "")
+                hintContent.Text = "";
+
             // Choose new notes for next try, set up correct answer interval (which is global I guess?)
             setupTry();
         }
@@ -280,6 +270,15 @@ namespace HelloWorld
             
             return intervals[index];
         }
+
+        private void Toggle_Hint(object sender, RoutedEventArgs e)
+        {
+            ShowHints = !ShowHints;
+            if (!ShowHints && hintContent.Text != DisabledHintsText)
+                hintContent.Text = DisabledHintsText;
+            else if (hintContent.Text == DisabledHintsText)
+                hintContent.Text = "";
+        }
     }
 
 
@@ -291,7 +290,6 @@ namespace HelloWorld
             public string Name { get; set; }
             public int NumHalfSteps { get; set; }
             public string Hint { get; set; }
-            //public string File { get; set; }
         }
 
         public class Note
