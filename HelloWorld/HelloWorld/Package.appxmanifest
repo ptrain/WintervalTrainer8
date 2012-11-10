@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="HelloWorld.App">
-      <VisualElements DisplayName="Interval Trainer" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="An interval trainer for Windows 8 tablet and desktop. Press play to play an interval, then select the corresponding one on the left and submit it. The app keeps count of your correct and incorrect options." ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="WInterval Trainer" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="An interval trainer for Windows 8 tablet and desktop. Press play to play an interval, then select the corresponding one on the left and submit it. The app keeps count of your correct and incorrect options." ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#464646" />
         <InitialRotationPreference>
           <Rotation Preference="landscape" />
           <Rotation Preference="landscapeFlipped" />
