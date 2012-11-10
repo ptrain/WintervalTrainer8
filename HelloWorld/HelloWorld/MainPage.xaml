@@ -84,12 +84,19 @@
         <MediaElement 
             x:Name ="firstNotePlayer" 
             MediaEnded="firstNotePlayer_PlaySecondNote" 
+            MediaFailed="failedSound"
             Source="sounds/cs6.wav" 
             AutoPlay="False" />
         
         <MediaElement 
             x:Name ="secondNotePlayer"  
+            MediaFailed="failedSound"
             Source="sounds/c7.wav" 
+            AutoPlay="False" />
+
+        <MediaElement 
+            x:Name ="failSound" 
+            Source="sounds/c4.wav" 
             AutoPlay="False" />
 
 

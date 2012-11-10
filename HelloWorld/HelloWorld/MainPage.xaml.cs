@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace HelloWorld
@@ -26,6 +27,10 @@ namespace HelloWorld
         private int numWrong = 0;
         private int numRight = 0;
 
+        private Interval currAns;
+        private Note n1;
+        private Note n2;
+
         /// <summary>
         /// This variable is used to determine if we are waiting for our sound events to finish.
         ///   If we are, this is true and all other events are ignored. If not, they are allowed.
@@ -34,7 +39,10 @@ namespace HelloWorld
 
         //private Interval lastInt = null;
 
-        List<Interval> intervals = new List<Interval>();
+        public List<Interval> intervals = new List<Interval>();
+        Dictionary<int, Interval> intervalsDict = new Dictionary<int,Interval>();
+
+        List<Note> notes = new List<Note>();
 
         public MainPage()
         {
@@ -55,7 +63,10 @@ namespace HelloWorld
             ansWrongNum.Text = numWrong.ToString();
             ansRightNum.Text = numRight.ToString();
             this.populateIntervals();
-            //this
+            this.populateNotes();
+
+            // Pick new notes, set global vars
+            setupTry();
         }
 
         /// <summary>
@@ -74,8 +85,42 @@ namespace HelloWorld
             greetingOutput.Text = "Hello, " + nameInput.Text + "!";
         }*/
 
+        private void setupTry()
+        {
+            Random rand = new Random();
+            int n1Index = rand.Next(0, 12);
+            int n2Index = rand.Next(0, 12);
+
+            // Pick random note 1
+            n1Index = rand.Next(0, 12);
+            n1 = notes[n1Index];
+            //firstNotePlayer.Source = new Uri(@"C:\Code\Active\WintervalTrainer8\Helloworld\Helloworld" + n1.getFilePath(), UriKind.RelativeOrAbsolute);
+            Uri u = new Uri("ms-resource:/Files/sounds/" + n1.File, UriKind.Absolute);
+            firstNotePlayer.Source = u;
+            // Pick random note 2
+            while(n1Index == n2Index){
+                // pick a new index
+                n2Index = rand.Next(0, 12);
+            }
+
+            n2 = notes[n2Index];
+            //secondNotePlayer.Source = new Uri(@"C:\Code\Active\WintervalTrainer8\Helloworld\Helloworld" + n2.getFilePath(), UriKind.RelativeOrAbsolute);
+            secondNotePlayer.Source = new Uri("ms-resource:/Files/sounds/" + n2.File, UriKind.Absolute);
+
+            // Calclulate interval
+            currAns = calculateInterval(n1, n2);
+        }
+
         private void Play_Scale(object sender, RoutedEventArgs e)
         {
+
+            // This simply plays the currently selected notes. These notes are globals somewhere
+            
+            // Plays the first sound, then an event handler
+            // attached to firstNotePlayer plays the second note
+            firstNotePlayer.Play();
+
+
             // See if we can play a scale
             if (holdForSound)
             {
@@ -85,8 +130,7 @@ namespace HelloWorld
             {
                 holdForSound = true;
             }
-            // First play a sound
-
+            
             // Now set the interval that was for later
             //lastInt = 
             
@@ -113,20 +157,39 @@ namespace HelloWorld
 
         private void populateIntervals()
         {
-            intervals.Add(new Interval() { Name = "m2" });
-            intervals.Add(new Interval() { Name = "M2" });
-            intervals.Add(new Interval() { Name = "m3" });
-            intervals.Add(new Interval() { Name = "M3" });
-            intervals.Add(new Interval() { Name = "P4" });
-            intervals.Add(new Interval() { Name = "P5" });
-            intervals.Add(new Interval() { Name = "m6" });
-            intervals.Add(new Interval() { Name = "M6" });
-            intervals.Add(new Interval() { Name = "m7" });
-            intervals.Add(new Interval() { Name = "M7"});
-            intervals.Add(new Interval() { Name = "P8"});
+            intervals.Add(new Interval() { Name = "m2", NumHalfSteps = 1 });
+            intervals.Add(new Interval() { Name = "M2", NumHalfSteps = 2 });
+            intervals.Add(new Interval() { Name = "m3", NumHalfSteps = 3 });
+            intervals.Add(new Interval() { Name = "M3", NumHalfSteps = 4 });
+            intervals.Add(new Interval() { Name = "P4", NumHalfSteps = 5 });
+            intervals.Add(new Interval() { Name = "A4/D5", NumHalfSteps = 6 });
+            intervals.Add(new Interval() { Name = "P5", NumHalfSteps = 7 });
+            intervals.Add(new Interval() { Name = "m6", NumHalfSteps = 8 });
+            intervals.Add(new Interval() { Name = "M6", NumHalfSteps = 9 });
+            intervals.Add(new Interval() { Name = "m7", NumHalfSteps = 10 });
+            intervals.Add(new Interval() { Name = "M7", NumHalfSteps = 11});
+            intervals.Add(new Interval() { Name = "P8", NumHalfSteps = 12});
 
             var res = from i in intervals group i by i.Name into grp orderby grp.Key select grp;
             cvsInts.Source = res;
+        }
+
+        private void populateNotes()
+        {
+            notes.Add(new Note() { Name = "C6", Num = 1, File="c6.wav" });
+            notes.Add(new Note() { Name = "C#6", Num = 2, File = "cs6.wav" });
+            notes.Add(new Note() { Name = "D6", Num = 3, File = "d6.wav" });
+            notes.Add(new Note() { Name = "D#6", Num = 4, File = "ds6.wav" });
+            notes.Add(new Note() { Name = "E6", Num = 5, File = "e6.wav" });
+            notes.Add(new Note() { Name = "F6", Num = 6, File = "f6.wav" });
+            notes.Add(new Note() { Name = "F#6", Num = 7, File = "fs6.wav" });
+            notes.Add(new Note() { Name = "G6", Num = 8, File = "g6.wav" });
+            notes.Add(new Note() { Name = "G#6", Num = 9, File = "gs6.wav" });
+            notes.Add(new Note() { Name = "A6", Num = 10, File = "a6.wav" });
+            notes.Add(new Note() { Name = "A#6", Num = 11, File = "as6.wav" });
+            notes.Add(new Note() { Name = "B6", Num = 12, File = "b6.wav" });
+            notes.Add(new Note() { Name = "C7", Num = 13, File = "c7.wav" });
+
         }
 
         private void Submit_Answer(object sender, RoutedEventArgs e)
@@ -134,9 +197,22 @@ namespace HelloWorld
             //submit answer and return true or false
             var ans = (theIntervals.SelectedItem as Interval);
 
-            //play a sound
-            firstNotePlayer.Play();
-            //return null;
+            // Check if right or wrong and take appropriate action
+            if (ans.Name == currAns.Name){
+                // do whatever happens when it's right
+                numRight++;
+                ansWrongNum.Text = numWrong.ToString();
+                ansRightNum.Text = numRight.ToString();
+            }
+            else {
+                // do whatever happens when it's wrong
+                numWrong++;
+                ansWrongNum.Text = numWrong.ToString();
+                ansRightNum.Text = numRight.ToString();
+            }
+
+            // Choose new notes for next try, set up correct answer interval (which is global I guess?)
+            setupTry();
         }
 
 
@@ -144,12 +220,64 @@ namespace HelloWorld
         {
             secondNotePlayer.Play();
         }
+        
+        private void failedSound(object sender, RoutedEventArgs e)
+        {
+            failSound.Play();
+        }
+        
+        public List<Interval> getIntervals()
+        {
+            return intervals;
+        }
+
+    
+        // Given two notes, returns the Interval object representing the
+        // distance between them
+
+        public Interval calculateInterval(Note n1, Note n2)
+        {
+
+            int index;
+
+            // n2 will have been played after n1
+
+            if (n2.Num > n1.Num)
+            {
+                index = n2.Num - n1.Num - 1;
+            }
+            else
+            {
+                index = Math.Abs(n2.Num - n1.Num) - 1;
+            }
+
+
+            
+            return intervals[index];
+        }
     }
 
-    public class Interval
-    {
-        public string Name { get;  set; }
-        //public string File { get; set; }
 
-    }
+
+
+
+        public class Interval
+        {
+            public string Name { get; set; }
+            public int NumHalfSteps { get; set; }
+            //public string File { get; set; }
+        }
+
+        public class Note
+        {
+            public string Name { get; set; }
+            public int Num { get; set; }
+            public string File { get; set; }
+
+            public string getFilePath()
+            {
+                return "/sounds/" + this.File;
+            }
+        }
+
 }
