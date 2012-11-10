@@ -158,18 +158,18 @@ namespace HelloWorld
         // Populate our basic intervals
         private void populateIntervals()
         {
-            intervals.Add(new Interval() { Name = "m2", NumHalfSteps = 1 });
-            intervals.Add(new Interval() { Name = "M2", NumHalfSteps = 2 });
-            intervals.Add(new Interval() { Name = "m3", NumHalfSteps = 3 });
-            intervals.Add(new Interval() { Name = "M3", NumHalfSteps = 4 });
-            intervals.Add(new Interval() { Name = "P4", NumHalfSteps = 5 });
-            intervals.Add(new Interval() { Name = "A4/D5", NumHalfSteps = 6 });
-            intervals.Add(new Interval() { Name = "P5", NumHalfSteps = 7 });
-            intervals.Add(new Interval() { Name = "m6", NumHalfSteps = 8 });
-            intervals.Add(new Interval() { Name = "M6", NumHalfSteps = 9 });
-            intervals.Add(new Interval() { Name = "m7", NumHalfSteps = 10 });
-            intervals.Add(new Interval() { Name = "M7", NumHalfSteps = 11});
-            intervals.Add(new Interval() { Name = "P8", NumHalfSteps = 12});
+            intervals.Add(new Interval() { Name = "m2", NumHalfSteps = 1, Hint = "Jaws..." });
+            intervals.Add(new Interval() { Name = "M2", NumHalfSteps = 2, Hint = "The Beatles - Yesterday" });
+            intervals.Add(new Interval() { Name = "m3", NumHalfSteps = 3, Hint = "Sad sound" });
+            intervals.Add(new Interval() { Name = "M3", NumHalfSteps = 4, Hint = "Doorbell"});
+            intervals.Add(new Interval() { Name = "P4", NumHalfSteps = 5, Hint = "Amazing Grace"});
+            intervals.Add(new Interval() { Name = "A4/D5", NumHalfSteps = 6, Hint = "Diabolus in Musica" });
+            intervals.Add(new Interval() { Name = "P5", NumHalfSteps = 7, Hint = "Star wars!"});
+            intervals.Add(new Interval() { Name = "m6", NumHalfSteps = 8, Hint = "Love Story (Where Do I Begin?)" });
+            intervals.Add(new Interval() { Name = "M6", NumHalfSteps = 9, Hint = "NBC" });
+            intervals.Add(new Interval() { Name = "m7", NumHalfSteps = 10, Hint = "West Side Story"});
+            intervals.Add(new Interval() { Name = "M7", NumHalfSteps = 11, Hint = "Pure Imagination" });
+            intervals.Add(new Interval() { Name = "P8", NumHalfSteps = 12, Hint = "Sounds like the same note..."});
 
             var res = from i in intervals group i by i.Name into grp orderby grp.Key select grp;
             cvsInts.Source = res;
