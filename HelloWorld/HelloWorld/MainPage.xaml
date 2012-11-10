@@ -13,7 +13,7 @@
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Hello, world!</x:String>
+        <x:String x:Key="AppName">Interval Trainer</x:String>
     </Page.Resources>
 
     <!--
@@ -40,14 +40,17 @@
         </Grid>
 
 
-        <StackPanel Grid.Row="1" Margin="120,30,0,0">
-            <TextBlock Text="What's your name?"/>
+        <!--<StackPanel Grid.Row="1" Margin="120,30,0,0">
+            <TextBlock Text="What's your name?" Style="{StaticResource BasicTextStyle}"/>
             <StackPanel Orientation="Horizontal" Margin="0,20,0,20">
                 <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-                <Button Content="Say &quot;Hello&quot;"/>
+                <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
             </StackPanel>
-            <TextBlock x:Name="greetingOutput"/>
-        </StackPanel>
+            <TextBlock x:Name="greetingOutput" Style="{StaticResource BigGreenTextStyle}"/>
+        </StackPanel>-->
+
+
+            <Button Content="Play" Click="Play_Scale" Margin="859,470,0,120" Grid.Row="1"/>
 
 
         <VisualStateManager.VisualStateGroups>

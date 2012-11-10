@@ -2,7 +2,8 @@
     x:Class="HelloWorld.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:HelloWorld">
+    xmlns:local="using:HelloWorld"
+    RequestedTheme="Dark">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -14,6 +15,16 @@
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="BigGreenTextStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="Green"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>
