@@ -97,6 +97,18 @@
                 <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
                 <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
             </Style>
+            <x:String x:Key="HintTitleText">Hint:</x:String>
+            <Style x:Key="HintTextStyle" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Typography.StylisticSet20" Value="True"/>
+                <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+                <Setter Property="Typography.CaseSensitiveForms" Value="True"/>
+            </Style>
+
 
 
         </ResourceDictionary>

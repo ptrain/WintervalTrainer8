@@ -117,6 +117,9 @@ namespace HelloWorld
 
             // Calclulate interval
             currAns = calculateInterval(n1, n2);
+
+            // Setup hint
+            //hintContent.Text = currAns.Hint;
         }
 
         private void Play_Scale(object sender, RoutedEventArgs e)
@@ -287,6 +290,7 @@ namespace HelloWorld
         {
             public string Name { get; set; }
             public int NumHalfSteps { get; set; }
+            public string Hint { get; set; }
             //public string File { get; set; }
         }
 
