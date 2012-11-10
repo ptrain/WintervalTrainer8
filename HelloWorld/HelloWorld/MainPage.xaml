@@ -70,7 +70,7 @@
 
 
 
-        <StackPanel x:Name="wrongPanel" Orientation="Horizontal" Margin="445,441,671,139" Grid.Row="1">
+        <StackPanel x:Name="stackPanel" Orientation="Horizontal" Margin="445,441,671,139" Grid.Row="1">
             <TextBlock x:Name="ansWrong" RenderTransformOrigin="0.499,0.5" Text="{StaticResource WrongText}" Style="{StaticResource WrongTextStyle}" />
             <TextBlock x:Name="ansWrongNum"  RenderTransformOrigin="9,1.35" Text="" Style="{StaticResource WrongTextStyle}" Margin="10,0,0,0" Height="48" />
             
@@ -177,6 +177,13 @@
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rightPanel">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>548,622,55,508</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
                     	<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ansWrong" d:IsOptimized="True"/>
                     	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="stackPanel">
                     		<DiscreteObjectKeyFrame KeyTime="0">
@@ -185,16 +192,14 @@
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ansWrongNum">
-                        	<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                        </DoubleAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ansWrongNum">
-                        	<DiscreteObjectKeyFrame KeyTime="0">
-                        		<DiscreteObjectKeyFrame.Value>
-                        			<Thickness>54,0,-75,-42</Thickness>
-                        		</DiscreteObjectKeyFrame.Value>
-                        	</DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
+                    	<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ansWrongNum" d:IsOptimized="True"/>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ansWrongNum">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<Thickness>109,23,-71,-40</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
                     	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="ansWrongNum">
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
