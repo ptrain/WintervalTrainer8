@@ -471,7 +471,7 @@
                     	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="intsGrid">
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
-                    				<Thickness>0,481,0,0</Thickness>
+                    				<Thickness>0</Thickness>
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
@@ -558,6 +558,28 @@
                     		<DiscreteObjectKeyFrame KeyTime="0">
                     			<DiscreteObjectKeyFrame.Value>
                     				<Thickness>47,180,97,400</Thickness>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<DoubleAnimation Duration="0" To="146" Storyboard.TargetProperty="(FrameworkElement.MinHeight)" Storyboard.TargetName="intsGrid" d:IsOptimized="True"/>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.MaxHeight)" Storyboard.TargetName="intsGrid">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>600</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="intsGrid">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<x:Double>240</x:Double>
+                    			</DiscreteObjectKeyFrame.Value>
+                    		</DiscreteObjectKeyFrame>
+                    	</ObjectAnimationUsingKeyFrames>
+                    	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="intsGrid">
+                    		<DiscreteObjectKeyFrame KeyTime="0">
+                    			<DiscreteObjectKeyFrame.Value>
+                    				<VerticalAlignment>Bottom</VerticalAlignment>
                     			</DiscreteObjectKeyFrame.Value>
                     		</DiscreteObjectKeyFrame>
                     	</ObjectAnimationUsingKeyFrames>
